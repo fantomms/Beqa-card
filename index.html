@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card Preview</title>
+</head>
+<body>
+    <h1>Welcome to the Card</h1>
+    <img src="card.jpg" alt="Card Image" width="300">
+    <br><br>
+    <audio id="voicePlayer" controls>
+        <source src="voice.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        const player = document.getElementById('voicePlayer');
+        let played = false;
+        player.onplay = () => {
+            if (played) {
+                player.pause();
+            }
+            played = true;
+        };
+    </script>
+</body>
+</html>
